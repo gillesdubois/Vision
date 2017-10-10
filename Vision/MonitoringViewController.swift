@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MonitoringViewController.swift
 //  Vision
 //
 //  Created by Gilles Dubois on 10/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MonitoringViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
