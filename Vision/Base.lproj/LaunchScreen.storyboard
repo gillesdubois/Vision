@@ -126,12 +126,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C1-up-TCq">
+                                <rect key="frame" x="131" y="491" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="krw-ay-pol">
+                                <rect key="frame" x="129" y="520" width="110" height="110"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GTe-NN-dTm" firstAttribute="leading" secondItem="hai-YF-SmF" secondAttribute="leading" id="2kk-Ic-SvG"/>
+                            <constraint firstItem="krw-ay-pol" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="3xb-AV-f85"/>
                             <constraint firstItem="LVE-da-1Tx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="6ck-mz-oDO"/>
                             <constraint firstItem="ZvK-wD-JuF" firstAttribute="trailing" secondItem="ueH-ix-egz" secondAttribute="trailing" id="86L-LK-ufJ"/>
+                            <constraint firstItem="krw-ay-pol" firstAttribute="top" secondItem="7C1-up-TCq" secondAttribute="bottom" constant="8" symbolic="YES" id="9vQ-Q4-sny"/>
                             <constraint firstItem="GTe-NN-dTm" firstAttribute="centerY" secondItem="wbl-2t-8IE" secondAttribute="centerY" id="BJO-Uz-4DH"/>
                             <constraint firstItem="OGh-tn-dZc" firstAttribute="top" secondItem="cqK-DW-0fm" secondAttribute="bottom" constant="32" id="BYF-Qk-wZl"/>
                             <constraint firstItem="YSS-SS-Aex" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="Be8-ro-69M"/>
@@ -142,13 +153,16 @@
                             <constraint firstItem="cqK-DW-0fm" firstAttribute="centerX" secondItem="7Ae-D9-yft" secondAttribute="centerX" id="LmP-PX-Apz"/>
                             <constraint firstItem="M14-Uy-gpp" firstAttribute="leading" secondItem="cqK-DW-0fm" secondAttribute="leading" id="MNF-Vk-1L3"/>
                             <constraint firstItem="M14-Uy-gpp" firstAttribute="top" secondItem="LVE-da-1Tx" secondAttribute="bottom" constant="16" id="OZn-k9-nv1"/>
+                            <constraint firstItem="7C1-up-TCq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="S9x-af-LD7"/>
                             <constraint firstItem="7Ae-D9-yft" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="SWU-WQ-syY"/>
                             <constraint firstItem="YSS-SS-Aex" firstAttribute="top" secondItem="ZvK-wD-JuF" secondAttribute="bottom" constant="8" symbolic="YES" id="WIg-lR-mNf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="krw-ay-pol" secondAttribute="bottom" constant="37" id="Wov-rO-RfW"/>
                             <constraint firstItem="LVE-da-1Tx" firstAttribute="leading" secondItem="OGh-tn-dZc" secondAttribute="leading" id="Yiw-Hz-Qy5"/>
                             <constraint firstItem="7Ae-D9-yft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="YlP-Vh-4B0"/>
                             <constraint firstItem="M14-Uy-gpp" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="ZBy-hp-Hq4"/>
                             <constraint firstItem="m3G-Gr-LLu" firstAttribute="leading" secondItem="ZvK-wD-JuF" secondAttribute="leading" id="aUT-uP-QJC"/>
                             <constraint firstItem="M14-Uy-gpp" firstAttribute="trailing" secondItem="cqK-DW-0fm" secondAttribute="trailing" id="aY9-6Z-3NF"/>
+                            <constraint firstItem="7C1-up-TCq" firstAttribute="centerX" secondItem="YSS-SS-Aex" secondAttribute="centerX" id="brt-2T-bJJ"/>
                             <constraint firstItem="GTe-NN-dTm" firstAttribute="trailing" secondItem="hai-YF-SmF" secondAttribute="trailing" id="cYj-Ny-Oit"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wbl-2t-8IE" secondAttribute="trailing" constant="14" id="erX-rc-UCn"/>
                             <constraint firstItem="M14-Uy-gpp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="jmJ-su-Lw0"/>
@@ -156,6 +170,7 @@
                             <constraint firstItem="cqK-DW-0fm" firstAttribute="leading" secondItem="GTe-NN-dTm" secondAttribute="leading" id="mii-BX-CFC"/>
                             <constraint firstItem="GTe-NN-dTm" firstAttribute="top" secondItem="OGh-tn-dZc" secondAttribute="bottom" constant="33" id="nMO-Y9-J3s"/>
                             <constraint firstItem="LVE-da-1Tx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nsb-7g-u6p"/>
+                            <constraint firstItem="krw-ay-pol" firstAttribute="trailing" secondItem="OGh-tn-dZc" secondAttribute="trailing" id="oYV-tL-hXA"/>
                             <constraint firstItem="m3G-Gr-LLu" firstAttribute="top" secondItem="YSS-SS-Aex" secondAttribute="bottom" constant="8" symbolic="YES" id="oZp-dw-u4G"/>
                             <constraint firstItem="ueH-ix-egz" firstAttribute="top" secondItem="wbl-2t-8IE" secondAttribute="bottom" constant="10" id="qdq-dk-QiF"/>
                             <constraint firstItem="cqK-DW-0fm" firstAttribute="top" secondItem="M14-Uy-gpp" secondAttribute="bottom" constant="8" symbolic="YES" id="rGR-oN-MnS"/>
@@ -163,9 +178,21 @@
                             <constraint firstItem="wbl-2t-8IE" firstAttribute="leading" secondItem="ueH-ix-egz" secondAttribute="leading" id="uKi-g7-jNs"/>
                             <constraint firstItem="m3G-Gr-LLu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="wOi-mf-gDh"/>
                             <constraint firstItem="m3G-Gr-LLu" firstAttribute="trailing" secondItem="cqK-DW-0fm" secondAttribute="trailing" id="x9I-8b-6XK"/>
+                            <constraint firstItem="7C1-up-TCq" firstAttribute="top" secondItem="m3G-Gr-LLu" secondAttribute="bottom" constant="35" id="zoZ-GE-5ye"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="httpSwitch" destination="ueH-ix-egz" id="xyL-oJ-z7T"/>
+                        <outlet property="icmpSwitch" destination="wbl-2t-8IE" id="Sfn-bh-qCS"/>
+                        <outlet property="name" destination="M14-Uy-gpp" id="etR-7b-d9h"/>
+                        <outlet property="refreshLabel" destination="YSS-SS-Aex" id="IOI-NX-PD4"/>
+                        <outlet property="refreshRateSlider" destination="ZvK-wD-JuF" id="eSU-Vm-mfb"/>
+                        <outlet property="serverAddress" destination="cqK-DW-0fm" id="JYE-X3-8KZ"/>
+                        <outlet property="statusImage" destination="krw-ay-pol" id="vhq-Ow-enE"/>
+                        <outlet property="statusLabel" destination="7C1-up-TCq" id="xDC-A8-2rF"/>
+                        <outlet property="statusLavel" destination="7C1-up-TCq" id="Y6f-Qu-gkn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
