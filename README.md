@@ -16,4 +16,4 @@ WARNING : Nothing is made atm still in dev
 
 ## Credits 
 
-@MyTheValentinus for the name ;)
+[@MyTheValentinus](https://github.com/MyTheValentinus) for the name idea ;)
