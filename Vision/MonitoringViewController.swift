@@ -8,6 +8,11 @@
 
 import UIKit
 
+/*
+ This value is either passed by `MonitoringTableViewController`
+ */
+var monitoring: Monitoring?
+
 class MonitoringViewController: UIViewController {
     
     // MARK : UI Properties
