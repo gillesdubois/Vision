@@ -10,7 +10,7 @@ import UIKit
 
 class MonitoringViewController: UIViewController {
     
-    // UI Properties
+    // MARK : UI Properties
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var serverAddress: UITextField!
@@ -23,6 +23,8 @@ class MonitoringViewController: UIViewController {
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
+    // MARK : Override
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,6 +33,22 @@ class MonitoringViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK : UITextFieldDelegate
+    
+    // Name
+    func textFieldDidBeginEditing(_ name: UITextField, serverAddress: UITextField) {
+        // TODO : Disabled object saving
+    }
+    
+    func textFieldDidEndEditing(_ name: UITextField, serverAddress: UITextField) {
+        // TODO : Disabled object saving
+    }
+    
+    func textFieldShouldReturn(_ name: UITextField, serverAddress: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 
