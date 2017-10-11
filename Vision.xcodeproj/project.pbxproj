@@ -14,6 +14,8 @@
 		4323CA891F8D4E3700539F3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4323CA871F8D4E3700539F3F /* LaunchScreen.storyboard */; };
 		4323CA941F8D4E3700539F3F /* VisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CA931F8D4E3700539F3F /* VisionTests.swift */; };
 		4323CA9F1F8D4E3700539F3F /* VisionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CA9E1F8D4E3700539F3F /* VisionUITests.swift */; };
+		4323CAAD1F8DE83400539F3F /* Monitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CAAC1F8DE83400539F3F /* Monitoring.swift */; };
+		4323CAAF1F8DE88B00539F3F /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4323CA9A1F8D4E3700539F3F /* VisionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4323CA9E1F8D4E3700539F3F /* VisionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUITests.swift; sourceTree = "<group>"; };
 		4323CAA01F8D4E3700539F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4323CAAC1F8DE83400539F3F /* Monitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitoring.swift; sourceTree = "<group>"; };
+		4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				4323CA851F8D4E3700539F3F /* Assets.xcassets */,
 				4323CA871F8D4E3700539F3F /* LaunchScreen.storyboard */,
 				4323CA8A1F8D4E3700539F3F /* Info.plist */,
+				4323CAAC1F8DE83400539F3F /* Monitoring.swift */,
+				4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4323CAAD1F8DE83400539F3F /* Monitoring.swift in Sources */,
 				4323CA811F8D4E3700539F3F /* MonitoringViewController.swift in Sources */,
 				4323CA7F1F8D4E3700539F3F /* AppDelegate.swift in Sources */,
+				4323CAAF1F8DE88B00539F3F /* MonitoringStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
