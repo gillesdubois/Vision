@@ -13,7 +13,7 @@ import UIKit
  */
 var monitoring: Monitoring?
 
-class MonitoringViewController: UIViewController {
+class MonitoringViewController: UIViewController, UITextFieldDelegate{
     
     // MARK : UI Properties
     
@@ -33,6 +33,12 @@ class MonitoringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Handle the text field’s user input through delegate callbacks.
+        serverAddress.delegate = self
+        name.delegate = self
+        
+        // Set refresh label slider default value
         setRefreshLabelDepOnSlider()
     }
 
