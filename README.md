@@ -1,6 +1,6 @@
 # Vision
 
-Vision is a lightweight monitoring system to check if your servers / website are up for i
+Vision is a lightweight monitoring system to check if your servers / website are up for iOs
 
 ## How to use
 
