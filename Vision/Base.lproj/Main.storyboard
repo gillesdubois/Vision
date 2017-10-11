@@ -191,7 +191,6 @@
                         <outlet property="serverAddress" destination="TLN-5c-JQB" id="LdQ-GL-YGK"/>
                         <outlet property="statusImage" destination="D29-KJ-6t9" id="yr8-6D-s51"/>
                         <outlet property="statusLabel" destination="LwX-OZ-J9C" id="kLg-xS-TOx"/>
-                        <outlet property="statusLavel" destination="LwX-OZ-J9C" id="HmH-ws-Hci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzl-MA-LDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
