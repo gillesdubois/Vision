@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MonitoringStatus: UIImage {
+class MonitoringStatus: UIImageView {
 
 }
