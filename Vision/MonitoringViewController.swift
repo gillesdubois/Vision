@@ -33,11 +33,17 @@ class MonitoringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setRefreshLabelDepOnSlider()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // Mark Action
+    @IBAction func onRefreshSliderChange(_ sender: UISlider) {
+        setRefreshLabelDepOnSlider()
     }
     
     // MARK : UITextFieldDelegate
@@ -54,6 +60,12 @@ class MonitoringViewController: UIViewController {
     func textFieldShouldReturn(_ name: UITextField, serverAddress: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+    
+    // MARK : Private functions
+    private func setRefreshLabelDepOnSlider(){
+        let currentValue = Int(self.refreshRateSlider.value)
+        self.refreshLabel.text = "\(currentValue) Min(s)"
     }
 
 
