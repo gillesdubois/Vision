@@ -17,6 +17,7 @@
 		4323CAAD1F8DE83400539F3F /* Monitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CAAC1F8DE83400539F3F /* Monitoring.swift */; };
 		4323CAAF1F8DE88B00539F3F /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */; };
 		4345642C1F8EA223009E5945 /* MonitoringTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345642B1F8EA223009E5945 /* MonitoringTableViewController.swift */; };
+		437876D71F954955008C450C /* MonitoringTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437876D61F954955008C450C /* MonitoringTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4323CAAC1F8DE83400539F3F /* Monitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitoring.swift; sourceTree = "<group>"; };
 		4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		4345642B1F8EA223009E5945 /* MonitoringTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringTableViewController.swift; sourceTree = "<group>"; };
+		437876D61F954955008C450C /* MonitoringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4323CAAC1F8DE83400539F3F /* Monitoring.swift */,
 				4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */,
 				4345642B1F8EA223009E5945 /* MonitoringTableViewController.swift */,
+				437876D61F954955008C450C /* MonitoringTableViewCell.swift */,
 			);
 			path = Vision;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4323CAAD1F8DE83400539F3F /* Monitoring.swift in Sources */,
+				437876D71F954955008C450C /* MonitoringTableViewCell.swift in Sources */,
 				4345642C1F8EA223009E5945 /* MonitoringTableViewController.swift in Sources */,
 				4323CA811F8D4E3700539F3F /* MonitoringViewController.swift in Sources */,
 				4323CA7F1F8D4E3700539F3F /* AppDelegate.swift in Sources */,
