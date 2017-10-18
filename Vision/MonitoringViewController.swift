@@ -28,6 +28,10 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var statusImage: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
+    // Back and save buttons outlet
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     // MARK : Override
     
     override func viewDidLoad() {
@@ -35,8 +39,11 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         
         // Handle the text field’s user input through delegate callbacks.
-        serverAddress.delegate = self
-        name.delegate = self
+        self.serverAddress.delegate = self
+        self.name.delegate = self
+        
+        // Disable save button by default
+        saveButton.isEnabled = false
         
         // Set refresh label slider default value
         setRefreshLabelDepOnSlider()
@@ -54,16 +61,17 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate{
     
     // MARK : UITextFieldDelegate
     
-    // Name
-    func textFieldDidBeginEditing(_ name: UITextField, serverAddress: UITextField) {
-        // TODO : Disabled object saving
+    func textFieldDidEndEditing(_ name: UITextField) {
+        if(self.name.text != "" && self.serverAddress.text != ""){
+            // Enable object saving
+            saveButton.isEnabled = true
+        }else{
+            // Disable object saving
+            saveButton.isEnabled = false;
+        }
     }
     
-    func textFieldDidEndEditing(_ name: UITextField, serverAddress: UITextField) {
-        // TODO : Disabled object saving
-    }
-    
-    func textFieldShouldReturn(_ name: UITextField, serverAddress: UITextField) -> Bool {
+    func textFieldShouldReturn(_ name: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
