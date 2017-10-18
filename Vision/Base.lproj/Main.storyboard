@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Your monitoring-->
         <scene sceneID="Lb5-HX-8ai">
             <objects>
                 <tableViewController id="p8N-bQ-UhA" customClass="MonitoringTableViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,17 +26,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-Fw-5L5" customClass="MonitoringStatus" customModule="Vision" customModuleProvider="target">
-                                            <rect key="frame" x="277" y="-1" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-FL-mDm">
-                                            <rect key="frame" x="19" y="17" width="250" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server Url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onp-x4-Xok">
                                             <rect key="frame" x="19" y="46" width="250" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -44,6 +33,17 @@
                                             <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib8-FL-mDm">
+                                            <rect key="frame" x="19" y="17" width="250" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Up" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-Fw-5L5" customClass="MonitoringStatus" customModule="Vision" customModuleProvider="target">
+                                            <rect key="frame" x="307" y="19" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -58,7 +58,13 @@
                             <outlet property="delegate" destination="p8N-bQ-UhA" id="OmU-4A-MeG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0ji-Zf-u6C"/>
+                    <navigationItem key="navigationItem" title="Your monitoring" id="0ji-Zf-u6C">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="NBB-hd-IDw">
+                            <connections>
+                                <segue destination="hSf-KU-glY" kind="show" identifier="AddItem" id="0eQ-76-I5e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tay-ET-wFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,19 +95,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monitor name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qPs-e5-vAQ">
-                                <rect key="frame" x="16" y="57" width="343" height="30"/>
+                                <rect key="frame" x="16" y="101" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Server address (e.g  : ip - url)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-5c-JQB">
-                                <rect key="frame" x="16" y="95" width="343" height="30"/>
+                                <rect key="frame" x="16" y="139" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General infos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6l-uY-WJi">
-                                <rect key="frame" x="134" y="20" width="107" height="21"/>
+                                <rect key="frame" x="134" y="64" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -113,28 +119,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyq-Rj-9Wt">
-                                <rect key="frame" x="134" y="157" width="105" height="21"/>
+                                <rect key="frame" x="134" y="201" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor by ping (ICMP) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6l-15-ruW">
-                                <rect key="frame" x="16" y="211" width="209" height="21"/>
+                                <rect key="frame" x="16" y="255" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monitor by HTTP Query :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-FK-7gW">
-                                <rect key="frame" x="16" y="252" width="209" height="21"/>
+                                <rect key="frame" x="16" y="296" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cuq-xk-VuL" userLabel="ICMP Switch">
-                                <rect key="frame" x="312" y="206" width="51" height="31"/>
+                                <rect key="frame" x="312" y="250" width="51" height="31"/>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fkn-eo-yab" userLabel="HTTP Switch">
-                                <rect key="frame" x="312" y="247" width="51" height="31"/>
+                                <rect key="frame" x="312" y="291" width="51" height="31"/>
                             </switch>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="1" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Tua-0e-6Af" userLabel="TIme Slider">
                                 <rect key="frame" x="16" y="368" width="347" height="31"/>
@@ -209,12 +215,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="asM-TT-e7G"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add a monitoring item" id="2gx-tt-sW5">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="jKe-rH-D9q"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="6cE-rZ-7qI"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="jKe-rH-D9q" id="pcZ-JR-7YB"/>
                         <outlet property="httpSwitch" destination="fkn-eo-yab" id="yeJ-e9-k1H"/>
                         <outlet property="icmpSwitch" destination="Cuq-xk-VuL" id="5s3-ms-6nQ"/>
                         <outlet property="name" destination="qPs-e5-vAQ" id="BvR-Fj-nVS"/>
                         <outlet property="refreshLabel" destination="aCZ-hv-oh5" id="tuc-8a-qc6"/>
                         <outlet property="refreshRateSlider" destination="Tua-0e-6Af" id="h5Z-0d-lxE"/>
+                        <outlet property="saveButton" destination="6cE-rZ-7qI" id="Oea-AF-lJw"/>
                         <outlet property="serverAddress" destination="TLN-5c-JQB" id="LdQ-GL-YGK"/>
                         <outlet property="statusImage" destination="D29-KJ-6t9" id="yr8-6D-s51"/>
                         <outlet property="statusLabel" destination="LwX-OZ-J9C" id="kLg-xS-TOx"/>
@@ -222,7 +234,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzl-MA-LDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224.80000000000001" y="393.55322338830587"/>
+            <point key="canvasLocation" x="1036" y="394"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5wK-KI-rSR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hSf-KU-glY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nwT-TS-L2O">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dGg-Wy-QDd" kind="relationship" relationship="rootViewController" id="48V-ex-Lff"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHw-db-ed9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="902"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Up" width="100" height="100"/>
+    </resources>
 </document>
