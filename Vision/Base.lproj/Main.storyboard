@@ -222,7 +222,11 @@
                                 <action selector="CancelButtonAction:" destination="dGg-Wy-QDd" id="px6-mG-pJZ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="6cE-rZ-7qI"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="6cE-rZ-7qI">
+                            <connections>
+                                <segue destination="dbc-aA-tKO" kind="unwind" unwindAction="unwindToMonitoringListWithSender:" id="Fed-cV-sQl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="jKe-rH-D9q" id="pcZ-JR-7YB"/>
@@ -238,6 +242,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzl-MA-LDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dbc-aA-tKO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1036" y="394"/>
         </scene>
