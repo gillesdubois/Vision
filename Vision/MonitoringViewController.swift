@@ -47,13 +47,16 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate{
         if let monitoring = monitoring {
             navigationItem.title = monitoring.name
             name.text = monitoring.name
+            serverAddress.text = monitoring.serverUrl
             icmpSwitch.isOn = monitoring.isIcmp
             httpSwitch.isOn = monitoring.isHttp
             refreshRateSlider.value = Float(monitoring.refreshRate)
+            
+            saveButton.isEnabled = true
+        }else{
+            // Disable save button by default on creation
+            saveButton.isEnabled = false
         }
-        
-        // Disable save button by default
-        saveButton.isEnabled = false
         
         // Set refresh label slider default value
         setRefreshLabelDepOnSlider()
