@@ -55,6 +55,7 @@
 		4323CAAE1F8DE88B00539F3F /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		4345642B1F8EA223009E5945 /* MonitoringTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringTableViewController.swift; sourceTree = "<group>"; };
 		437876D61F954955008C450C /* MonitoringTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringTableViewCell.swift; sourceTree = "<group>"; };
+		4389AAB71F99219500B1862C /* Vision.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vision.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 				4323CA921F8D4E3700539F3F /* VisionTests */,
 				4323CA9D1F8D4E3700539F3F /* VisionUITests */,
 				4323CA7C1F8D4E3700539F3F /* Products */,
+				4389AAB41F99219500B1862C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +107,7 @@
 		4323CA7D1F8D4E3700539F3F /* Vision */ = {
 			isa = PBXGroup;
 			children = (
+				4389AAB71F99219500B1862C /* Vision.entitlements */,
 				4323CA7E1F8D4E3700539F3F /* AppDelegate.swift */,
 				4323CA801F8D4E3700539F3F /* MonitoringViewController.swift */,
 				4323CA821F8D4E3700539F3F /* Main.storyboard */,
@@ -135,6 +138,13 @@
 				4323CAA01F8D4E3700539F3F /* Info.plist */,
 			);
 			path = VisionUITests;
+			sourceTree = "<group>";
+		};
+		4389AAB41F99219500B1862C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +219,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
 							};
 						};
 					};
