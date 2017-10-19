@@ -141,13 +141,12 @@ class MonitoringTableViewController: UITableViewController {
     }
     */
 
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+
 
     /*
     // MARK: - Navigation
@@ -163,11 +162,11 @@ class MonitoringTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadSamples() {
         
-        guard let mon1 = Monitoring(name: "Monitor 1", serverUrl: "192.168.1.100", isIcmp: true, isHttp: false, refreshRate : 40) else {
+        guard let mon1 = Monitoring(name: "Monitor 1", serverUrl: "192.168.1.100", isIcmp: false, isHttp: true, refreshRate : 40) else {
             fatalError("Unable to instantiate mon1")
         }
         
-        guard let mon2 = Monitoring(name: "Monitor 2", serverUrl: "192.168.1.10", isIcmp: true, isHttp: false, refreshRate : 50) else {
+        guard let mon2 = Monitoring(name: "Monitor 2", serverUrl: "192.168.1.10", isIcmp: true, isHttp: true, refreshRate : 50) else {
             fatalError("Unable to instantiate mon2")
         }
         
