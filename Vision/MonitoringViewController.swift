@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class MonitoringViewController: UIViewController, UITextFieldDelegate{
+class MonitoringViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate{
     
     /*
      This value is either passed by `MonitoringTableViewController`
