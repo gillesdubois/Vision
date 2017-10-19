@@ -52,6 +52,10 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate, UINavigat
             httpSwitch.isOn = monitoring.isHttp
             refreshRateSlider.value = Float(monitoring.refreshRate)
             
+            // Also make Status image and label not hidden
+            statusImage.isHidden = false
+            statusLabel.isHidden = false
+            
             saveButton.isEnabled = true
         }else{
             // Disable save button by default on creation
