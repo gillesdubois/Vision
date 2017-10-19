@@ -50,7 +50,7 @@
                                     <outlet property="monitoringStatus" destination="QAg-Fw-5L5" id="z6C-J4-dNL"/>
                                     <outlet property="serverName" destination="ib8-FL-mDm" id="ws5-Y9-Faz"/>
                                     <outlet property="serverUrl" destination="onp-x4-Xok" id="Exs-NG-knz"/>
-                                    <segue destination="dGg-Wy-QDd" kind="show" identifier="EditItem" trigger="accessoryAction" id="DUE-GV-ZbL"/>
+                                    <segue destination="dGg-Wy-QDd" kind="show" identifier="EditItem" id="U3T-Ec-Wgd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -264,6 +264,6 @@
         <image name="Up" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DUE-GV-ZbL"/>
+        <segue reference="U3T-Ec-Wgd"/>
     </inferredMetricsTieBreakers>
 </document>
