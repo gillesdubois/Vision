@@ -167,19 +167,31 @@ class MonitoringTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadSamples() {
         
-        guard let mon1 = Monitoring(name: "Monitor 1", serverUrl: "www.google.fr", isIcmp: false, isHttp: true, refreshRate : 40) else {
+        guard let mon1 = Monitoring(name: "Google", serverUrl: "www.google.fr", isIcmp: false, isHttp: true, refreshRate : 60) else {
             fatalError("Unable to instantiate mon1")
         }
         
-        guard let mon2 = Monitoring(name: "Monitor 2", serverUrl: "www.yolo.fr", isIcmp: true, isHttp: true, refreshRate : 50) else {
+        guard let mon2 = Monitoring(name: "Yolo", serverUrl: "www.yolo.fr", isIcmp: true, isHttp: true, refreshRate : 60) else {
             fatalError("Unable to instantiate mon2")
         }
         
-        guard let mon3 = Monitoring(name: "Monitor 3", serverUrl: "192.168.1.1", isIcmp: true, isHttp: false, refreshRate : 30) else {
+        guard let mon3 = Monitoring(name: "LiveBox", serverUrl: "192.168.1.1", isIcmp: true, isHttp: false, refreshRate : 20) else {
             fatalError("Unable to instantiate mon3")
         }
         
-        mons += [mon1, mon2, mon3]
+        guard let mon4 = Monitoring(name: "Valentin Network", serverUrl: "network.valentin-deville.eu", isIcmp: true, isHttp: false, refreshRate : 5) else {
+            fatalError("Unable to instantiate mon4")
+        }
+        
+        guard let mon5 = Monitoring(name: "Wolo Online", serverUrl: "wolo-online.fr", isIcmp: false, isHttp: true, refreshRate : 10) else {
+            fatalError("Unable to instantiate mon5")
+        }
+
+        guard let mon6 = Monitoring(name: "Wala Online", serverUrl: "wala-online.fr", isIcmp: false, isHttp: true, refreshRate : 15) else {
+            fatalError("Unable to instantiate mon6")
+        }
+        
+        mons += [mon1, mon2, mon3, mon4, mon5, mon6]
         
     }
     
