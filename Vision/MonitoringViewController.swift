@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import PlainPing
 
 class MonitoringViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate{
     
@@ -24,10 +25,6 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate, UINavigat
     @IBOutlet weak var httpSwitch: UISwitch!
     @IBOutlet weak var refreshRateSlider: UISlider!
     @IBOutlet weak var refreshLabel: UILabel!
-    
-    // Below UI properties are only shown on edit ( moniroting already set )
-    @IBOutlet weak var statusImage: UIImageView!
-    @IBOutlet weak var statusLabel: UILabel!
     
     // Back and save buttons outlet
     @IBOutlet weak var cancelButton: UIBarButtonItem!
@@ -51,10 +48,6 @@ class MonitoringViewController: UIViewController, UITextFieldDelegate, UINavigat
             icmpSwitch.isOn = monitoring.isIcmp
             httpSwitch.isOn = monitoring.isHttp
             refreshRateSlider.value = Float(monitoring.refreshRate)
-            
-            // Also make Status image and label not hidden
-            statusImage.isHidden = false
-            statusLabel.isHidden = false
             
             saveButton.isEnabled = true
         }else{
