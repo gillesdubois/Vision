@@ -8,6 +8,8 @@
 
 import UIKit
 import os.log
+import PlainPing
+import Alamofire
 
 class MonitoringTableViewController: UITableViewController {
     
@@ -112,6 +114,9 @@ class MonitoringTableViewController: UITableViewController {
         cell.serverUrl.text = mon.serverUrl
         cell.serverName.text = mon.name
         
+        // Check server connexion
+        self.checkServerStatus(serverUrl: mon.serverUrl, isIcmp: mon.isIcmp, isHttp: mon.isHttp, statusImage: cell.monitoringStatus)
+
         return cell
     }
 
@@ -162,11 +167,11 @@ class MonitoringTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadSamples() {
         
-        guard let mon1 = Monitoring(name: "Monitor 1", serverUrl: "192.168.1.100", isIcmp: false, isHttp: true, refreshRate : 40) else {
+        guard let mon1 = Monitoring(name: "Monitor 1", serverUrl: "www.google.fr", isIcmp: false, isHttp: true, refreshRate : 40) else {
             fatalError("Unable to instantiate mon1")
         }
         
-        guard let mon2 = Monitoring(name: "Monitor 2", serverUrl: "192.168.1.10", isIcmp: true, isHttp: true, refreshRate : 50) else {
+        guard let mon2 = Monitoring(name: "Monitor 2", serverUrl: "www.yolo.fr", isIcmp: true, isHttp: true, refreshRate : 50) else {
             fatalError("Unable to instantiate mon2")
         }
         
@@ -175,6 +180,50 @@ class MonitoringTableViewController: UITableViewController {
         }
         
         mons += [mon1, mon2, mon3]
+        
+    }
+    
+    private func checkServerStatus(serverUrl: String, isIcmp: Bool, isHttp: Bool, statusImage: MonitoringStatus) -> Void {
+        
+        if(isIcmp){
+            // Test on the fly by pinging the address set
+            PlainPing.ping( serverUrl, withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
+                if timeElapsed != nil {
+                    statusImage.image = #imageLiteral(resourceName: "Up")
+                }
+                
+                if let error = error {
+                    print("error: \(error.localizedDescription)")
+                    statusImage.image = #imageLiteral(resourceName: "Down")
+                }
+            })
+        }
+        
+        if(isHttp){
+            
+            var srvUrl : String =  serverUrl
+            
+            // add http // https if not in the original string
+            if( (!(srvUrl.hasPrefix("http://"))) && (!(srvUrl.hasPrefix("https://"))) ){
+                srvUrl = "\("https://" + srvUrl)"
+                debugPrint(srvUrl)
+            }
+            
+            // Test for http connect
+            Alamofire.request(srvUrl)
+                .validate(statusCode: 200..<300)
+                .validate(contentType: ["text/html"])
+                .responseData { response in
+                    switch response.result {
+                    case .success:
+                        print("Validation Successful")
+                        statusImage.image = #imageLiteral(resourceName: "Up")
+                    case .failure(let error):
+                        print(error)
+                        statusImage.image = #imageLiteral(resourceName: "Down")
+                    }
+            }
+        }
         
     }
 }
