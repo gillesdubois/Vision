@@ -31,6 +31,7 @@ class MonitoringTableViewController: UITableViewController {
                 mons.append(monitoring)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            saveMonitorings()
         }
     }
     
@@ -72,7 +73,13 @@ class MonitoringTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        loadSamples()
+        // Load any saved monitorings, otherwise load sample data.
+        if let savedMonitorings = loadMonitorings() {
+            mons += savedMonitorings
+        }else {
+            // Load the sample data.
+            loadSamples()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -133,6 +140,7 @@ class MonitoringTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             mons.remove(at: indexPath.row)
+            saveMonitorings()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -237,5 +245,19 @@ class MonitoringTableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    // Mark : Private methods
+    private func saveMonitorings() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(mons, toFile: Monitoring.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Monitorings successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save monitorings...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadMonitorings() -> [Monitoring]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Monitoring.ArchiveURL.path) as? [Monitoring]
     }
 }
